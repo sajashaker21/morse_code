@@ -56,3 +56,5 @@ This project was developed to combine practical web development with an educatio
 
 [https://sajashaker21.github.io/morse_code/](https://sajashaker21.github.io/morse_code/)
 
+## screenshots
+![ MORSE CODE WEBSITE](morse_code.png)
