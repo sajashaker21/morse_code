@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>إشارات - محول شفرة مورس</title>
+  <meta name="description" content="حوّل النص إلى شفرة مورس والعكس، وتعلّم الحروف والجداول بطريقة مبسطة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="العودة للبداية">
+      <span class="brand-mark" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i>
+      </span>
+      <span>إشارات</span>
+    </a>
+    <nav aria-label="التنقل الرئيسي">
+      <a class="active" href="#converter">المحول</a>
+      <a href="#learn">تعلم مورس</a>
+      <a href="#history">التاريخ والاستخدام</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="converter">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> مختبر الاتصالات القديمة</p>
+        <h1>حوّل النصوص إلى<br><em>شفرة مورس</em></h1>
+        <p class="subtitle">ترجمة دقيقة بين النص العربي والإنجليزي وإشارات مورس، بواجهة بسيطة وقابلة للاستخدام مباشرة.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="signal-card">
+          <span class="dot"></span><span class="dash"></span><span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="converter-card" aria-label="محول شفرة مورس">
+      <div class="mode-tabs" role="tablist" aria-label="اتجاه التحويل">
+        <button class="mode-tab active" id="textToMorse" role="tab" aria-selected="true">نص إلى مورس</button>
+        <button class="mode-tab" id="morseToText" role="tab" aria-selected="false">مورس إلى نص</button>
+      </div>
+
+      <div class="panels">
+        <div class="panel">
+          <label for="inputText" id="inputLabel">النص المراد تحويله</label>
+          <textarea id="inputText" spellcheck="false" placeholder="اكتب النص هنا…"></textarea>
+          <div class="panel-meta">
+            <span id="inputCount">0 حرف</span>
+            <button class="icon-button" id="clearInput" title="مسح النص" aria-label="مسح النص">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3m-9 0 1 13h10l1-13M10 11v5m4-5v5"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <button class="swap-button" id="swapMode" title="تبديل الاتجاه" aria-label="تبديل اتجاه التحويل">
+          <svg viewBox="0 0 24 24"><path d="M7 7h11m0 0-3-3m3 3-3 3M17 17H6m0 0 3 3m-3-3 3-3"/></svg>
+        </button>
+
+        <div class="panel result-panel">
+          <label for="outputText" id="outputLabel">شفرة مورس</label>
+          <textarea id="outputText" readonly></textarea>
+          <div class="panel-meta">
+            <span id="outputCount">0 إشارة</span>
+            <button class="icon-button" id="copyOutput" title="نسخ النتيجة" aria-label="نسخ النتيجة">
+              <svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V5H5v11h3"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="converter-actions">
+        <button class="primary-button" id="convertButton">تحويل الآن <span>←</span></button>
+        <button class="sound-button" id="playSound">
+          <svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 3a6 6 0 0 1 0 8m2-11a10 10 0 0 1 0 14"/></svg>
+          تشغيل الصوت
+        </button>
+      </div>
+    </section>
+
+    <section class="learn-section" id="learn">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> مرجع سريع</p>
+          <h2>جدول الحروف</h2>
+        </div>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg>
+          <input id="charSearch" type="search" placeholder="ابحث عن حرف عربي أو لاتيني">
+        </div>
+      </div>
+      <div class="morse-table-wrap">
+        <table class="morse-table">
+          <thead>
+            <tr>
+              <th>الرمز</th>
+              <th>شفرة مورس</th>
+              <th>نوعه</th>
+            </tr>
+          </thead>
+          <tbody id="lettersTable"></tbody>
+        </table>
+      </div>
+
+      <div class="teaching-grid">
+        <article class="teach-card">
+          <div class="teach-number">01</div>
+          <h3>النقطة والشرطة</h3>
+          <p>النقطة مدة قصيرة، والشرطة مدة تعادل ثلاث نقاط. افصل الحروف ومسافات الكلمات بوضوح.</p>
+        </article>
+        <article class="teach-card">
+          <div class="teach-number">02</div>
+          <h3>مسافات الكلمات</h3>
+          <p>استخدم الشرطة المائلة / للفصل بين الكلمات عند كتابة الشفرة يدويًا.</p>
+        </article>
+        <article class="teach-card">
+          <div class="teach-number">03</div>
+          <h3>التدريب اليومي</h3>
+          <p>ابدأ بالحروف الأكثر استخدامًا، واستمِع للإشارات بصوت واضح لتتقن التعرف عليها.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="history-section" id="history">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> موسوعة مورس</p>
+          <h2>تاريخ شفرة مورس</h2>
+        </div>
+      </div>
+      <article class="history-article">
+        <header class="article-intro">
+          <div>
+            <span class="article-date">1830s — حتى اليوم</span>
+            <h3>من اختراع التلغراف إلى لغة إنقاذ عالمية</h3>
+            <p>شفرة مورس هي نظام من الإشارات الممثلة بالنقاط والشرطات، صُمم لنقل المعلومات عبر الأسلاك والكهرباء ثم تطور ليُرسل بصريًا وصوتيًا ولاسلكيًا.</p>
+          </div>
+          <figure class="history-figure">
+            <img src="assets/images/A.svg" alt="مثال توضيحي لشيفرة الحرف A">
+            <figcaption>الحرف A يرمز له بـ .-</figcaption>
+          </figure>
+        </header>
+
+        <div class="article-body">
+          <section>
+            <span class="article-number">01</span>
+            <h4>نشأة الشفرة واختراعها</h4>
+            <p>ظهرت فكرة شفرة مورس في ثلاثينيات القرن التاسع عشر ضمن تطوير التلغراف الكهربائي. ابتكر سامويل مورس الجهاز، وعمل مع ألفريد فايل على تصميم نظام الإرسال، وطور فريتز برس نظام الرموز الذي أصبح أساس «مورس الأمريكي» و«مورس الدولي» المعروف لاحقًا.</p>
+            <p>اعتمد النظام المبكر على أرقام مرتبطة بعناصر الكلمات داخل دفتر ترميز، ثم حلت الرموز الأبجدية والرقمية محل هذا الأسلوب تدريجيًا بعد إدراك أن رموزًا مباشرة للحروف أسرع وأكثر عملية.</p>
+          </section>
+
+          <section>
+            <span class="article-number">02</span>
+            <h4>لماذا سُميت باسم مورس؟</h4>
+            <p>نسبت الشفرة إلى مخترع التلغراف سامويل فينش مورس، الذي عرض عام 1844 اتصالًا تلغرافيًا بين واشنطن وبالتيمور. كانت التجربة العملية الأولى مصدر شهرة واسعة وأثبتت أن الإشارات الكهربائية تستطيع نقل الرسائل عبر مسافات بعيدة وبسرعة لم تكن معروفة آنذاك.</p>
+          </section>
+
+          <section class="article-callout">
+            <img src="assets/images/S.svg" alt="بطاقة شيفرة الحرف S">
+            <div>
+              <span>إشارة السطر الأول</span>
+              <strong>تتكوّن النقطة والشرطة معًا من زمانين قابلين للقياس؛ كانت بساطتهما سر انتشار الشفرة عالميًا.</strong>
+            </div>
+          </section>
+
+          <section>
+            <span class="article-number">03</span>
+            <h4>مورس الأمريكي ومورس الدولي</h4>
+            <p>استخدمت أنظمة مورس الأولية ترميزات مختلفة للطول والمسافة، ثم استقر النظام الدولي على تعاريف موحدة للحروف والأرقام والفواصل. اليوم تُعد هذه النسخة الدولية هي الأكثر انتشارًا، وتستخدم نقطة قصيرة وشرطة تعادل ثلاث نقاط، مع مسافة بين عناصر الحرف ومسافة أطول بين الحروف والكلمات.</p>
+          </section>
+
+          <section>
+            <span class="article-number">04</span>
+            <h4>استخدامها عبر التاريخ</h4>
+            <p>دخلت مورس السكك الحديدية والبحرية والجيش والشرطة ووسائل الطيران المبكرة. كانت الوسيلة الأساسية لإرسال برقيات الأخبار، وإدارة القطارات، والاتصال بين السفن والشواطئ. وفي الحرب العالمية الثانية استخدمها المشغلون العسكريون، بينما ما زالت جهات الطوارئ والبحرية وتطبيقات الراديو الهواة تعتمدها.</p>
+            <p>أشهر إشارة تاريخية هي <b dir="ltr">SOS</b>، الممثلة بـ <b dir="ltr">··· --- ···</b>. لم تكن الكلمة اختصارًا إنجليزيًا أصلًا، بل اختيرت لإشارتها المميزة وسهولة إرسالها واستقبالها، خصوصًا في حالات الطوارئ.</p>
+          </section>
+
+          <section class="article-callout sos-callout">
+            <div>
+              <span>إشارة الاستغاثة</span>
+              <strong dir="ltr">... --- ...</strong>
+            </div>
+            <img src="assets/images/5.svg" alt="بطاقة إشارة تعليمية رقمية">
+          </section>
+
+          <section>
+            <span class="article-number">05</span>
+            <h4>أسلوب الإرسال والاستقبال</h4>
+            <p>يُرسل الحرف بعد تجميع نقاطه وشرائطه، وتترك مسافة قصيرة بين الحروف ومسافة أطول بين الكلمات. يمكن تنفيذ الإشارة بمفتاح تلغرافي، أو وميض ضوئي، أو صفارة، أو صوت راديو، أو حتى غمزات ضوئية. هذه المرونة جعلت الشفرة مفيدة في كل مكان ينجح فيه إرسال نبضة سمعية أو ضوئية أو كهربائية.</p>
+            <p>تقاس السرعة بوحدة «الكلِمة في الدقيقة»، وقد تستخدم ألحانًا ثابتة لتدريب الأذن على التعرف السريع، مثل نمط المجموعات بدل قراءة الرموز بصريًا حرفًا حرفًا.</p>
+          </section>
+
+          <section>
+            <span class="article-number">06</span>
+            <h4>مكانتها اليوم</h4>
+            <p>رغم تحول الاتصالات إلى الإنترنت والهاتف والأقمار الصناعية، ما زالت مورس تحظى بقيمة علمية وتعليمية وهواة راديو عالية. إنها تخبرنا كيف نضبط الإشارة والضجيج والنقل، وتبقى مهارة سلامة مفيدة لدى طواقم البحر والطيران والرحلات البرية.</p>
+          </section>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home"><span class="brand-mark"><i></i><i></i><i></i><i></i><i></i></span><span>إشارات</span></a>
+    <p>تعلم وأرسل واستمع • محول شفرة مورس</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">تم النسخ</div>
+  <script src="script.js"></script>
+</body>
+</html>

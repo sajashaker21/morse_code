@@ -1,0 +1,182 @@
+[
+    {
+        "character":  "L",
+        "morse":  ".-..",
+        "file":  "assets/images/L.svg"
+    },
+    {
+        "character":  "E",
+        "morse":  ".",
+        "file":  "assets/images/E.svg"
+    },
+    {
+        "character":  "Y",
+        "morse":  "-.--",
+        "file":  "assets/images/Y.svg"
+    },
+    {
+        "character":  "K",
+        "morse":  "-.-",
+        "file":  "assets/images/K.svg"
+    },
+    {
+        "character":  "5",
+        "morse":  ".....",
+        "file":  "assets/images/5.svg"
+    },
+    {
+        "character":  "Z",
+        "morse":  "--..",
+        "file":  "assets/images/Z.svg"
+    },
+    {
+        "character":  "0",
+        "morse":  "-----",
+        "file":  "assets/images/0.svg"
+    },
+    {
+        "character":  "N",
+        "morse":  "-.",
+        "file":  "assets/images/N.svg"
+    },
+    {
+        "character":  "H",
+        "morse":  "....",
+        "file":  "assets/images/H.svg"
+    },
+    {
+        "character":  "V",
+        "morse":  "...-",
+        "file":  "assets/images/V.svg"
+    },
+    {
+        "character":  "S",
+        "morse":  "...",
+        "file":  "assets/images/S.svg"
+    },
+    {
+        "character":  "1",
+        "morse":  ".----",
+        "file":  "assets/images/1.svg"
+    },
+    {
+        "character":  "D",
+        "morse":  "-..",
+        "file":  "assets/images/D.svg"
+    },
+    {
+        "character":  "B",
+        "morse":  "-...",
+        "file":  "assets/images/B.svg"
+    },
+    {
+        "character":  "X",
+        "morse":  "-..-",
+        "file":  "assets/images/X.svg"
+    },
+    {
+        "character":  "Q",
+        "morse":  "--.-",
+        "file":  "assets/images/Q.svg"
+    },
+    {
+        "character":  "4",
+        "morse":  "....-",
+        "file":  "assets/images/4.svg"
+    },
+    {
+        "character":  "8",
+        "morse":  "---..",
+        "file":  "assets/images/8.svg"
+    },
+    {
+        "character":  "G",
+        "morse":  "--.",
+        "file":  "assets/images/G.svg"
+    },
+    {
+        "character":  "3",
+        "morse":  "...--",
+        "file":  "assets/images/3.svg"
+    },
+    {
+        "character":  "A",
+        "morse":  ".-",
+        "file":  "assets/images/A.svg"
+    },
+    {
+        "character":  "R",
+        "morse":  ".-.",
+        "file":  "assets/images/R.svg"
+    },
+    {
+        "character":  "C",
+        "morse":  "-.-.",
+        "file":  "assets/images/C.svg"
+    },
+    {
+        "character":  "T",
+        "morse":  "-",
+        "file":  "assets/images/T.svg"
+    },
+    {
+        "character":  "P",
+        "morse":  ".--.",
+        "file":  "assets/images/P.svg"
+    },
+    {
+        "character":  "M",
+        "morse":  "--",
+        "file":  "assets/images/M.svg"
+    },
+    {
+        "character":  "9",
+        "morse":  "----.",
+        "file":  "assets/images/9.svg"
+    },
+    {
+        "character":  "U",
+        "morse":  "..-",
+        "file":  "assets/images/U.svg"
+    },
+    {
+        "character":  "O",
+        "morse":  "---",
+        "file":  "assets/images/O.svg"
+    },
+    {
+        "character":  "7",
+        "morse":  "--...",
+        "file":  "assets/images/7.svg"
+    },
+    {
+        "character":  "I",
+        "morse":  "..",
+        "file":  "assets/images/I.svg"
+    },
+    {
+        "character":  "W",
+        "morse":  ".--",
+        "file":  "assets/images/W.svg"
+    },
+    {
+        "character":  "J",
+        "morse":  ".---",
+        "file":  "assets/images/J.svg"
+    },
+    {
+        "character":  "2",
+        "morse":  "..---",
+        "file":  "assets/images/2.svg"
+    },
+    {
+        "character":  "6",
+        "morse":  "-....",
+        "file":  "assets/images/6.svg"
+    },
+    {
+        "character":  "F",
+        "morse":  "..-.",
+        "file":  "assets/images/F.svg"
+    }
+]
